@@ -5,7 +5,7 @@ import datetime
 NOTLAR_DOSYASI = "notlar.txt"
 
 def menu_goster():
-    print("\n📘 NOT DEFTERİ UYGULAMASI")
+    print("\n NOT DEFTERİ UYGULAMASI")
     print("----------------------------")
     print("1. Notları Listele")
     print("2. Yeni Not Ekle")
@@ -25,19 +25,19 @@ def notlari_kaydet(notlar):
             dosya.write(not_ + "\n")
 
 def notlari_listele(notlar):
-    print("\n📋 KAYITLI NOTLAR:")
+    print("\n KAYITLI NOTLAR:")
     if not notlar:
         print("Hiç not yok.")
     for i, not_ in enumerate(notlar, start=1):
         print(f"{i}. {not_}")
 
 def yeni_not_ekle(notlar):
-    icerik = input("📝 Not içeriğini gir: ")
+    icerik = input(" Not içeriğini gir: ")
     tarih = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     not_ = f"{icerik} (eklenme tarihi: {tarih})"
     notlar.append(not_)
     notlari_kaydet(notlar)
-    print("✅ Not başarıyla eklendi.")
+    print(" Not başarıyla eklendi.")
 
 def not_sil(notlar):
     notlari_listele(notlar)
